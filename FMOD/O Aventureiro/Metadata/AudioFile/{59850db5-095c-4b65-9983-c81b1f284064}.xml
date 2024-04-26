@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{59850db5-095c-4b65-9983-c81b1f284064}">
+		<property name="assetPath">
+			<value>mixkit-wind-in-the-forest-1237.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>25.321088435374151</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{46637850-04dc-459c-b00c-44c1927b20b2}</destination>
+		</relationship>
+	</object>
+</objects>

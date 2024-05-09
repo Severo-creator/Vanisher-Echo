@@ -6,6 +6,7 @@ using UnityEngine;
 public class SonarParticleEffect : MonoBehaviour
 {
 
+
     public ParticleSystem ps;
     public bool Pause;
     public GameObject Lightef;
@@ -28,6 +29,7 @@ public class SonarParticleEffect : MonoBehaviour
     {
         Pause = false;
         ps = GetComponent<ParticleSystem>();
+        
     }
 
   
@@ -43,7 +45,9 @@ public class SonarParticleEffect : MonoBehaviour
           StartCoroutine(MyCoroutine());
           
         }
-        
+
+            
+
     }
 
     public void PlataformScan(){

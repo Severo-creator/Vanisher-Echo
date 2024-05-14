@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask groundLayer;
     public GameObject groundCheck;
 
+    
     public float jumpForce;
     public float velX;
     public int velY;

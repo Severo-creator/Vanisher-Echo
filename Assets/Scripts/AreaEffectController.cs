@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using FMODUnity;
 using FMOD.Studio;
 
 public class AreaEffectSonnar : MonoBehaviour
@@ -10,8 +9,11 @@ public class AreaEffectSonnar : MonoBehaviour
     public GameObject player;
     public bool Sonar;
     public Rigidbody2D rg;
+
+    public Rigidbody2D playerrg;
     public  Collider2D collider;
-    public StudioEventEmitter ev;
+    //public StudioEventEmitter ev;
+    private EventInstance eventInstance;
 
     public GameObject TopCheck;
     public GameObject BopCheck;
@@ -19,6 +21,8 @@ public class AreaEffectSonnar : MonoBehaviour
     public bool grounded;
     public bool fall;
     public LayerMask layerMask;
+
+    private int direction;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +32,9 @@ public class AreaEffectSonnar : MonoBehaviour
         Sonar = false;
         collider = GetComponent<Collider2D>();
         collider.enabled = false;
-        ev = GetComponent<StudioEventEmitter>();
+        EventInstance eventInstance = AudioManager.instance.CreateInstance(FMODEvents.instance.Passos);
+        //ev = GetComponent<StudioEventEmitter>();
+        direction = 1;
     }
 
     // Update is called once per frame
@@ -38,18 +44,28 @@ public class AreaEffectSonnar : MonoBehaviour
         grounded = Physics2D.Linecast(TopCheck.transform.position, BopCheck.transform.position, layerMask);
         if(!grounded && !fall){
             Debug.Log("SEM CHAO!");
-            ev.Stop();
+            //ev.Stop();
+            eventInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             fall = true;
         }
 
        if(!Sonar) transform.position = new Vector3(player.transform.position.x, player.transform.position.y, transform.position.z);
+
+       if(playerrg.velocity.x >  0){
+            direction = 1;
+        }else if(playerrg.velocity.x <  0){
+            direction = -1;
+        }
+        Debug.Log(direction);
     }
 
     public void groundCheck(){
         Sonar = true;
         collider.enabled = true;
-        ev.Play();
-        rg.velocity = new Vector2(10, rg.velocity.y);
+        //ev.Play();
+        PLAYBACK_STATE playbackState;
+        eventInstance.getPlaybackState(out playbackState);
+        rg.velocity = new Vector2(10 * direction, rg.velocity.y);
         StartCoroutine(MyCoroutine());
     }
 
@@ -59,7 +75,8 @@ public class AreaEffectSonnar : MonoBehaviour
 
         yield return new WaitForSeconds(0.87f);
         rg.velocity = new Vector2(0, rg.velocity.y);
-        ev.Stop();
+        //ev.Stop();
+        eventInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         fall = false;
         collider.enabled = false;
         Sonar = false;

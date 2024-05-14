@@ -2,12 +2,12 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/main/Unity.gitignore
 #
-/Vanisher-Echo/[Ll]ibrary/
-/Vanisher-Echo/[Tt]emp/
-/Vanisher-Echo/[Oo]bj/
-/Vanisher-Echo/[Bb]uild/
-/Vanisher-Echo/[Bb]uilds/
-/Vanisher-Echo/[Ll]ogs/
+/Vanisher-Echo/Library/
+/Vanisher-Echo/Temp/
+/Vanisher-Echo/Obj/
+/Vanisher-Echo/Build/
+/Vanisher-Echo/Builds/
+/Vanisher-Echo/Logs/
 /[Uu]ser[Ss]ettings/
 
 # MemoryCaptures can get excessive in size.

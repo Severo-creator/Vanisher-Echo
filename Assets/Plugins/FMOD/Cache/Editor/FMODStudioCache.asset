@@ -69,11 +69,38 @@ MonoBehaviour:
   Path: FMOD/O Aventureiro/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638507860589633423
+  lastModified: 638506133413807635
   FileSizes:
   - Name: Desktop
-    Value: 852
+    Value: 890
   Exists: 1
+--- !u!114 &-3655905441624655901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Passos
+  m_EditorClassIdentifier: 
+  Path: event:/Passos
+  Guid:
+    Data1: 1972361257
+    Data2: 1300239293
+    Data3: -1090518636
+    Data4: 1029889232
+  Banks:
+  - {fileID: 5226390574019148471}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 25321
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93,12 +120,13 @@ MonoBehaviour:
   EditorEvents:
   - {fileID: -4754884903745271769}
   - {fileID: -7337362074835976269}
+  - {fileID: -3655905441624655901}
   EditorParameters: []
   MasterBanks:
   - {fileID: 5477630782249682971}
   StringsBanks:
   - {fileID: -4452921450740580440}
-  cacheTime: 638507860589673419
+  cacheTime: 638506133414947466
   cacheVersion: 131608
 --- !u!114 &5226390574019148471
 MonoBehaviour:
@@ -115,10 +143,10 @@ MonoBehaviour:
   Path: FMOD/O Aventureiro/Build/Desktop/SDX.bank
   Name: SDX
   StudioPath: bank:/SDX
-  lastModified: 638507860589673419
+  lastModified: 638506133414947466
   FileSizes:
   - Name: Desktop
-    Value: 322624
+    Value: 323616
   Exists: 1
 --- !u!114 &5477630782249682971
 MonoBehaviour:
@@ -135,7 +163,7 @@ MonoBehaviour:
   Path: FMOD/O Aventureiro/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638507860589623384
+  lastModified: 638506133413735095
   FileSizes:
   - Name: Desktop
     Value: 1036

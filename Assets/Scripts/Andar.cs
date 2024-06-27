@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rg;
     public LayerMask groundLayer;
     public GameObject groundCheck;
+    Animator animator;
 
 
     public float jumpForce;
@@ -22,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rg = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
         grounded = false;
         AirJump = true;
     }
@@ -32,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
         bool jumpInput = Input.GetButtonDown("Jump");
 
         grounded = Physics2D.Linecast(transform.position, groundCheck.transform.position, layerMask);
-
+        
         if (!grounded)
         {
             falling = true;
@@ -41,19 +44,25 @@ public class PlayerMovement : MonoBehaviour
         {
             falling = false;
             Debug.Log("impact sound");
+            animator.SetBool("isJumping", false);
         }
 
         if (grounded) AirJump = true;
-
-        rg.velocity = new Vector2(Input.GetAxis("Horizontal") * velX, rg.velocity.y);
 
         if (jumpInput && (grounded || AirJump))
         {
             if (!grounded) AirJump = false;
             rg.velocity = new Vector2(rg.velocity.x, jumpForce);
+            animator.SetBool("isJumping", true);
         }
     }
 
+    private void FixedUpdate()
+    {
+        rg.velocity = new Vector2(Input.GetAxis("Horizontal") * velX, rg.velocity.y);
+        animator.SetFloat("xVelocity", Math.Abs(rg.velocity.x));
+        animator.SetFloat("yVelocity", rg.velocity.y);
+    }
 
 
 }

@@ -69,7 +69,7 @@ MonoBehaviour:
   Path: FMOD/O Aventureiro/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638506133413807635
+  lastModified: 638513043193770672
   FileSizes:
   - Name: Desktop
     Value: 890
@@ -126,7 +126,7 @@ MonoBehaviour:
   - {fileID: 5477630782249682971}
   StringsBanks:
   - {fileID: -4452921450740580440}
-  cacheTime: 638506133414947466
+  cacheTime: 638513043193802714
   cacheVersion: 131608
 --- !u!114 &5226390574019148471
 MonoBehaviour:
@@ -143,7 +143,7 @@ MonoBehaviour:
   Path: FMOD/O Aventureiro/Build/Desktop/SDX.bank
   Name: SDX
   StudioPath: bank:/SDX
-  lastModified: 638506133414947466
+  lastModified: 638513043193802714
   FileSizes:
   - Name: Desktop
     Value: 323616
@@ -163,7 +163,7 @@ MonoBehaviour:
   Path: FMOD/O Aventureiro/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638506133413735095
+  lastModified: 638502887838057410
   FileSizes:
   - Name: Desktop
     Value: 1036

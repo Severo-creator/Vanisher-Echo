@@ -9,14 +9,15 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask groundLayer;
     public GameObject groundCheck;
 
-    
+
     public float jumpForce;
     public float velX;
     public int velY;
     public bool grounded;
     public bool AirJump;
     public LayerMask layerMask;
-    
+    public bool falling = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,19 +29,27 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-
-
         bool jumpInput = Input.GetButtonDown("Jump");
 
         grounded = Physics2D.Linecast(transform.position, groundCheck.transform.position, layerMask);
-        if(grounded)AirJump=true;
 
-        rg.velocity = new Vector2(Input.GetAxis("Horizontal")*velX, rg.velocity.y);
-        
+        if (!grounded)
+        {
+            falling = true;
+        }
+        if (grounded && falling)
+        {
+            falling = false;
+            Debug.Log("impact sound");
+        }
+
+        if (grounded) AirJump = true;
+
+        rg.velocity = new Vector2(Input.GetAxis("Horizontal") * velX, rg.velocity.y);
+
         if (jumpInput && (grounded || AirJump))
         {
-            if(!grounded)AirJump=false;
+            if (!grounded) AirJump = false;
             rg.velocity = new Vector2(rg.velocity.x, jumpForce);
         }
     }

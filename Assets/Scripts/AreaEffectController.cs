@@ -11,7 +11,7 @@ public class AreaEffectSonnar : MonoBehaviour
     public Rigidbody2D rg;
 
     public Rigidbody2D playerrg;
-    public  Collider2D collider;
+    public Collider2D collider;
     //public StudioEventEmitter ev;
     private EventInstance eventInstance;
 
@@ -40,26 +40,31 @@ public class AreaEffectSonnar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
         grounded = Physics2D.Linecast(TopCheck.transform.position, BopCheck.transform.position, layerMask);
-        if(!grounded && !fall){
+        if (!grounded && !fall)
+        {
             Debug.Log("SEM CHAO!");
             //ev.Stop();
             eventInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             fall = true;
         }
 
-       if(!Sonar) transform.position = new Vector3(player.transform.position.x, player.transform.position.y, transform.position.z);
+        if (!Sonar) transform.position = new Vector3(player.transform.position.x, player.transform.position.y, transform.position.z);
 
-       if(playerrg.velocity.x >  0){
+        if (playerrg.velocity.x > 0)
+        {
             direction = 1;
-        }else if(playerrg.velocity.x <  0){
+        }
+        else if (playerrg.velocity.x < 0)
+        {
             direction = -1;
         }
-        Debug.Log(direction);
+        //Debug.Log(direction);
     }
 
-    public void groundCheck(){
+    public void groundCheck()
+    {
         Sonar = true;
         collider.enabled = true;
         //ev.Play();
@@ -69,9 +74,9 @@ public class AreaEffectSonnar : MonoBehaviour
         StartCoroutine(MyCoroutine());
     }
 
-     IEnumerator MyCoroutine()
+    IEnumerator MyCoroutine()
     {
-        
+
 
         yield return new WaitForSeconds(0.87f);
         rg.velocity = new Vector2(0, rg.velocity.y);

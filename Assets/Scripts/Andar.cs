@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -10,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask groundLayer;
     public GameObject groundCheck;
     Animator animator;
+    SpriteRenderer spriteRenderer;
 
 
     public float jumpForce;
@@ -18,13 +20,15 @@ public class PlayerMovement : MonoBehaviour
     public bool grounded;
     public bool AirJump;
     public LayerMask layerMask;
-    public bool falling = false;
+    bool falling = false;
+    bool facingRight = true;
 
     // Start is called before the first frame update
     void Start()
     {
         rg = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
         grounded = false;
         AirJump = true;
     }
@@ -60,9 +64,26 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         rg.velocity = new Vector2(Input.GetAxis("Horizontal") * velX, rg.velocity.y);
+        if (Input.GetAxis("Horizontal") > 0 && !facingRight)
+        {
+            Flip();
+        }
+        if (Input.GetAxis("Horizontal") < 0 && facingRight)
+        {
+            Flip();
+        }
+           
         animator.SetFloat("xVelocity", Math.Abs(rg.velocity.x));
         animator.SetFloat("yVelocity", rg.velocity.y);
     }
 
+    void Flip()
+    {
+        Vector3 currentScale = gameObject.transform.localScale;
+        currentScale.x *= -1;
+        gameObject.transform.localScale = currentScale;
+
+        facingRight = !facingRight;
+    }
 
 }

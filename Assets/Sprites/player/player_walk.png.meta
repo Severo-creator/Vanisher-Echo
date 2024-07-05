@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f6a1e19bcf665694fb55ade36ed53e62
+guid: 5ecfaf8293e661d448d29686d4bf294e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,169 +110,169 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: jonas_idle_0
+      name: player_walk_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 32
-        height: 33
+        height: 34
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 86e9467bda451e341af9cd91d8e76082
-      internalID: -503260915
+      spriteID: 409948c4b6a1d2a4f80947ac476e374d
+      internalID: 1081906008
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jonas_idle_1
+      name: player_walk_1
       rect:
         serializedVersion: 2
         x: 32
         y: 0
         width: 32
-        height: 33
+        height: 34
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 43bbb855fd3007a4b9978247f15a6831
-      internalID: -397829173
+      spriteID: 7927164a647d2b3418a5781aabba072a
+      internalID: 1823645522
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jonas_idle_2
+      name: player_walk_2
       rect:
         serializedVersion: 2
         x: 64
         y: 0
         width: 32
-        height: 33
+        height: 34
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5969311d9a792664f800bc452105a503
-      internalID: 1585608825
+      spriteID: 242f0e1b639f83342999eb993aa17e23
+      internalID: 115959989
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jonas_idle_3
+      name: player_walk_3
       rect:
         serializedVersion: 2
         x: 96
         y: 0
         width: 32
-        height: 33
+        height: 34
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4cfe3876231ac6346b062b29b8ecccbb
-      internalID: -1755434541
+      spriteID: 2cb7b1633a72a5f428323443618b022d
+      internalID: 993679469
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jonas_idle_4
+      name: player_walk_4
       rect:
         serializedVersion: 2
         x: 128
         y: 0
         width: 32
-        height: 33
+        height: 34
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f8f01956d33d0a4da51e55dcb6a9385
-      internalID: -1124943845
+      spriteID: a8eb57cd68857d043841d06248d65bcb
+      internalID: 970986703
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jonas_idle_5
+      name: player_walk_5
       rect:
         serializedVersion: 2
         x: 160
         y: 0
         width: 32
-        height: 33
+        height: 34
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f2c371389aba4d549b90e0a3013c1f44
-      internalID: -1700628049
+      spriteID: 898a9cf476f0a3343baeb8582867d0a1
+      internalID: 1370513762
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jonas_idle_6
+      name: player_walk_6
       rect:
         serializedVersion: 2
         x: 192
         y: 0
         width: 32
-        height: 33
+        height: 34
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 85a2d5fc04de17d4eb1ad1cdefd650b8
-      internalID: -1373223984
+      spriteID: 64ad66cb76439234685860f99f327ff0
+      internalID: -198885682
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jonas_idle_7
+      name: player_walk_7
       rect:
         serializedVersion: 2
         x: 224
         y: 0
         width: 32
-        height: 33
+        height: 34
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b3e31d6b636f9bc4ab393783780bc2a8
-      internalID: -357781436
+      spriteID: 91e803af9bf9d2c4cbe563364d6f0b45
+      internalID: -940576796
       vertices: []
       indices: 
       edges: []
@@ -288,14 +288,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      jonas_idle_0: -503260915
-      jonas_idle_1: -397829173
-      jonas_idle_2: 1585608825
-      jonas_idle_3: -1755434541
-      jonas_idle_4: -1124943845
-      jonas_idle_5: -1700628049
-      jonas_idle_6: -1373223984
-      jonas_idle_7: -357781436
+      player_walk_0: 1081906008
+      player_walk_1: 1823645522
+      player_walk_2: 115959989
+      player_walk_3: 993679469
+      player_walk_4: 970986703
+      player_walk_5: 1370513762
+      player_walk_6: -198885682
+      player_walk_7: -940576796
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

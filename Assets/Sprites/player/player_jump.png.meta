@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9e95550522555e04c92336eae679588d
+guid: 981b78cf28a9e254db90239066efb23f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,127 +110,127 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: jonas_search_0
+      name: player_jump_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 32
-        height: 33
+        height: 34
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3d824c9b69e6f3e499a7bb0edecf216e
-      internalID: 628031561
+      spriteID: ba3c898f15133c84aa36ebf01b5da458
+      internalID: -1264597267
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jonas_search_1
+      name: player_jump_1
       rect:
         serializedVersion: 2
         x: 32
         y: 0
         width: 32
-        height: 33
+        height: 34
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 437ecd9b4bf926741b4da6a36dabc35c
-      internalID: 699073723
+      spriteID: 3fe35d74089d67448a8be6923ce0b083
+      internalID: -825744860
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jonas_search_2
+      name: player_jump_2
       rect:
         serializedVersion: 2
         x: 64
         y: 0
         width: 32
-        height: 33
+        height: 34
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1344c7622cc8db64594e36cc8241d9c6
-      internalID: -315936058
+      spriteID: 8d1db1c182ac37e4d873ec64b01190d8
+      internalID: -1997064718
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jonas_search_3
+      name: player_jump_3
       rect:
         serializedVersion: 2
         x: 96
         y: 0
         width: 32
-        height: 33
+        height: 34
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 143aca1413df5c045ad81baaea16e63a
-      internalID: -719350149
+      spriteID: 292df223f99ae6d42af7fada661d7beb
+      internalID: -1273456943
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jonas_search_4
+      name: player_jump_4
       rect:
         serializedVersion: 2
         x: 128
         y: 0
         width: 32
-        height: 33
+        height: 34
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2dfa1587c7ee554419a567819c7fa74e
-      internalID: 777541194
+      spriteID: 0a3bf0d5a2e90d945bd61fad95969e35
+      internalID: -225539310
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jonas_search_5
+      name: player_jump_5
       rect:
         serializedVersion: 2
         x: 160
         y: 0
         width: 32
-        height: 33
+        height: 34
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 06260bae55db59840b3ba4917898f45a
-      internalID: -1814600694
+      spriteID: 61a2a723cfa1b4e4592bfd3efe2e4933
+      internalID: 1218114124
       vertices: []
       indices: 
       edges: []
@@ -246,12 +246,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      jonas_search_0: 628031561
-      jonas_search_1: 699073723
-      jonas_search_2: -315936058
-      jonas_search_3: -719350149
-      jonas_search_4: 777541194
-      jonas_search_5: -1814600694
+      player_jump_0: -1264597267
+      player_jump_1: -825744860
+      player_jump_2: -1997064718
+      player_jump_3: -1273456943
+      player_jump_4: -225539310
+      player_jump_5: 1218114124
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

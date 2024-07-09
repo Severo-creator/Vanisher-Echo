@@ -23,26 +23,27 @@ public class SonarParticleEffect : MonoBehaviour
     
     private float timer = 0f; 
 
-
+    public Animator animator;
    
     void Start()
     {
         Pause = false;
         ps = GetComponent<ParticleSystem>();
-        
+        animator = GetComponentInParent<Animator>();
     }
 
   
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.T) && Pause == false){
-          Lightef.transform.position = transform.position;
-          ps.Play();
-          SpotLight.Sonar();
-          PlataformScan();
+            animator.Play("search");
+            Lightef.transform.position = transform.position;
+            ps.Play();
+            SpotLight.Sonar();
+            PlataformScan();
           
-          AudioManager.instance.PlayOneShot(FMODEvents.instance.Sonar, transform.position);
-          StartCoroutine(MyCoroutine());
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.Sonar, transform.position);
+            StartCoroutine(MyCoroutine());
           
         }
 
@@ -59,19 +60,14 @@ public class SonarParticleEffect : MonoBehaviour
     IEnumerator MyCoroutine()
     {
         Pause = true;
-        
         yield return new WaitForSeconds(0.87f);
         ps.Stop();
-
-       StartCoroutine(Light());
+        StartCoroutine(Light());
     }
 
     IEnumerator  Light(){
-
         yield return new WaitForSeconds(2f);
-
         Debug.Log("OFF");
-
         SpotLight.TurnOFF();
         Pause = false;
     }

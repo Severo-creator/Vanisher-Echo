@@ -11,7 +11,6 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask groundLayer;
     public GameObject groundCheck;
     Animator animator;
-    SpriteRenderer spriteRenderer;
 
 
     public float jumpForce;
@@ -28,7 +27,6 @@ public class PlayerMovement : MonoBehaviour
     {
         rg = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
         grounded = false;
         AirJump = true;
     }

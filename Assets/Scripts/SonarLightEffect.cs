@@ -29,8 +29,8 @@ public class SonarLightEffect : MonoBehaviour
 
 
     public void Sonar(){
-      StartCoroutine(InterpolateValues());
-      return;
+        StartCoroutine(InterpolateValues());
+        return;
     }
 
     IEnumerator InterpolateValues()
@@ -58,8 +58,8 @@ public class SonarLightEffect : MonoBehaviour
     }
 
     public void TurnOFF(){
-      Light2D.pointLightInnerRadius = 0f;
-      Light2D.pointLightOuterRadius = 0f;
-      return;
+        Light2D.pointLightInnerRadius = 0f;
+        Light2D.pointLightOuterRadius = 0f;
+        return;
     }
 }

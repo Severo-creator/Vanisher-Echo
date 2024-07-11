@@ -37,23 +37,32 @@ public class PlayerMovement : MonoBehaviour
         bool jumpInput = Input.GetButtonDown("Jump");
 
         grounded = Physics2D.Linecast(transform.position, groundCheck.transform.position, layerMask);
-        
-        if (!grounded)
+
+        if (grounded)
         {
-            falling = true;
-        }
-        if (grounded && falling)
-        {
-            falling = false;
-            Debug.Log("impact sound");
+            AirJump = true;
+
+            if (falling)
+            {
+                falling = false;
+                Debug.Log("impact sound");
+            }
             animator.SetBool("isJumping", false);
         }
-
-        if (grounded) AirJump = true;
+        else
+        {
+            falling = true;
+            animator.SetBool("isJumping", true);
+        }
+        
 
         if (jumpInput && (grounded || AirJump))
         {
-            if (!grounded) AirJump = false;
+            if (!grounded)
+            {
+                AirJump = false;
+                animator.Play("Jumping", -1, 0f); //Restart Jumping animation
+            }
             rg.velocity = new Vector2(rg.velocity.x, jumpForce);
             animator.SetBool("isJumping", true);
         }
@@ -71,6 +80,7 @@ public class PlayerMovement : MonoBehaviour
             Flip();
         }
            
+        // Handling Animations
         animator.SetFloat("xVelocity", Math.Abs(rg.velocity.x));
         animator.SetFloat("yVelocity", rg.velocity.y);
     }
@@ -80,7 +90,6 @@ public class PlayerMovement : MonoBehaviour
         Vector3 currentScale = gameObject.transform.localScale;
         currentScale.x *= -1;
         gameObject.transform.localScale = currentScale;
-
         facingRight = !facingRight;
     }
 

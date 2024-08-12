@@ -442,6 +442,7 @@ MonoBehaviour:
   MasterBanks:
   - Master
   Banks:
+  - Ambience
   - SDX
   BanksToLoad: []
   LiveUpdatePort: 9264
@@ -458,17 +459,17 @@ MonoBehaviour:
   HideSetupWizard: 1
   LastEventReferenceScanVersion: 131608
   Platforms:
-  - {fileID: 3993049453534972146}
-  - {fileID: 1760836865862749197}
+  - {fileID: -7601664900942143848}
+  - {fileID: -7498264866782756907}
+  - {fileID: -4919697064534007912}
+  - {fileID: -4706947649188198938}
+  - {fileID: -4347129762806969455}
   - {fileID: -2869943379612583185}
   - {fileID: 1505414082664891554}
-  - {fileID: 6076742812243457599}
-  - {fileID: -4919697064534007912}
+  - {fileID: 1760836865862749197}
+  - {fileID: 3993049453534972146}
   - {fileID: 5077210064297744488}
-  - {fileID: -7601664900942143848}
-  - {fileID: -4347129762806969455}
-  - {fileID: -7498264866782756907}
-  - {fileID: -4706947649188198938}
+  - {fileID: 6076742812243457599}
   MigratedPlatforms: 0500000012000000060000000b000000080000000a000000090000000c000000150000000200000001000000
 --- !u!114 &1505414082664891554
 MonoBehaviour:
@@ -601,15 +602,15 @@ MonoBehaviour:
     HasValue: 0
   displaySortOrder: 0
   childIdentifiers:
+  - 0f8eb3f400726694eb47beb1a9f94ce8
+  - e7a046c753c3c3d4aacc91f6597f310d
+  - b7716510a1f36934c87976f3a81dbf3d
+  - fd7c55dab0fce234b8c25f6ffca523c1
+  - c88d16e5272a4e241b0ef0ac2e53b73d
   - 46fbfdf3fc43db0458918377fd40293e
   - 2fea114e74ecf3c4f920e1d5cc1c4c40
-  - 52eb9df5db46521439908db3a29a1bbb
-  - b7716510a1f36934c87976f3a81dbf3d
   - 2c5177b11d81d824dbb064f9ac8527da
-  - 0f8eb3f400726694eb47beb1a9f94ce8
-  - c88d16e5272a4e241b0ef0ac2e53b73d
-  - e7a046c753c3c3d4aacc91f6597f310d
-  - fd7c55dab0fce234b8c25f6ffca523c1
+  - 52eb9df5db46521439908db3a29a1bbb
   codecChannels:
     Value: []
     HasValue: 0

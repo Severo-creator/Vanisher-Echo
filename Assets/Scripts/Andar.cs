@@ -12,7 +12,6 @@ public class PlayerMovement : MonoBehaviour
     public GameObject groundCheck;
     Animator animator;
 
-
     public float jumpForce;
     public float velX;
     public int velY;
@@ -45,6 +44,7 @@ public class PlayerMovement : MonoBehaviour
             if (falling)
             {
                 falling = false;
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.ImpactSound, transform.position);
                 Debug.Log("impact sound");
             }
             animator.SetBool("isJumping", false);
@@ -58,6 +58,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (jumpInput && (grounded || AirJump))
         {
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.Jump, transform.position);
             if (!grounded)
             {
                 AirJump = false;
@@ -70,7 +71,19 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        
         rg.velocity = new Vector2(Input.GetAxis("Horizontal") * velX, rg.velocity.y);
+
+
+        if(rg.velocity.x != 0){
+
+            if(!AudioManager.instance.isWalking()){
+                AudioManager.instance.InitializeStepSound();
+            }
+        }else{
+            AudioManager.instance.stopWalk();
+        }
+
         if (Input.GetAxis("Horizontal") > 0 && !facingRight)
         {
             Flip();

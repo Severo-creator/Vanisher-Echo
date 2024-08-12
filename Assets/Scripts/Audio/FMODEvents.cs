@@ -12,15 +12,20 @@ public class FMODEvents : MonoBehaviour
 
     [field: Header("SFX")]
 
-    [field: SerializeField] public EventReference PoliceCall {get; private set; }
-
-    [field: SerializeField] public EventReference PoliceStep {get; private set; }
 
     [field: SerializeField] public EventReference Sonar {get; private set; }
 
     [field: SerializeField] public EventReference WindSound {get; private set; }
 
     [field: SerializeField] public EventReference Passos {get; private set; }
+
+    [field: SerializeField] public EventReference Jump {get; private set; }
+
+    [field: SerializeField] public EventReference ImpactSound {get; private set; }
+
+    [field: SerializeField] public EventReference Desabamento {get; private set; }
+
+    [field: SerializeField] public EventReference GhostCatch {get; private set; }
 
     public static FMODEvents instance {get; private set; }
 

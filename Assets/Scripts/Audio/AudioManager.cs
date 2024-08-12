@@ -9,8 +9,13 @@ public class AudioManager : MonoBehaviour
 
     private EventInstance ambienceEventInstance;
 
+    private EventInstance stepEventInstance;
+
+    private EventInstance DialogueEventInstance;
+
     private List<StudioEventEmitter> eventEmitters;
     private List<EventInstance> eventInstances;
+
 
     private void Awake(){
         if (instance != null){
@@ -24,12 +29,37 @@ public class AudioManager : MonoBehaviour
     }
 
     private void Start(){
-        //InitializeAmbience(FMODEvents.instance.ambience);
+        stepEventInstance = CreateInstance(FMODEvents.instance.Passos);
+        //eventInstances.add(stepEventInstance);
+        InitializeAmbience(FMODEvents.instance.ambience);
     }
 
     public void InitializeAmbience(EventReference ambienceEventReference){
         ambienceEventInstance = CreateInstance(ambienceEventReference);
         ambienceEventInstance.start();
+    }
+
+    public void InitializeDialogue(EventReference EventReference){
+        DialogueEventInstance = CreateInstance(EventReference);
+        DialogueEventInstance.start();
+    }
+
+    public void InitializeStepSound(){
+       stepEventInstance.start();
+    }
+
+    public void stopWalk(){
+        
+        if (stepEventInstance.isValid()){
+            stepEventInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            //stepEventInstance.release();
+        }
+    }
+
+    public bool isWalking(){
+        PLAYBACK_STATE playbackState;
+        stepEventInstance.getPlaybackState(out playbackState);
+        return playbackState == PLAYBACK_STATE.PLAYING;
     }
 
     public void PlayOneShot(EventReference sound, Vector3 worldPos){

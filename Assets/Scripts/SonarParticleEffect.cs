@@ -67,7 +67,6 @@ public class SonarParticleEffect : MonoBehaviour
 
     IEnumerator  Light(){
         yield return new WaitForSeconds(2f);
-        Debug.Log("OFF");
         SpotLight.TurnOFF();
         Pause = false;
     }

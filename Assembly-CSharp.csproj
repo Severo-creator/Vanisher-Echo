@@ -60,8 +60,10 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\SpotSound.cs" />
     <Compile Include="Assets\Scripts\MenuPrincipalManager.cs" />
+    <Compile Include="Assets\Scripts\ParallaxEffectController.cs" />
     <Compile Include="Assets\Sceneand.cs" />
     <Compile Include="Assets\Scripts\PlayerControllerScript.cs" />
+    <Compile Include="Assets\Scripts\SpiritManager.cs" />
     <Compile Include="Assets\Scripts\AreaEffectController.cs" />
     <Compile Include="Assets\Scripts\SonarLightEffect.cs" />
     <Compile Include="Assets\Scripts\Audio\FMODEvents.cs" />
@@ -69,8 +71,10 @@
     <Compile Include="Assets\Scripts\PlatformPlayerController.cs" />
     <Compile Include="Assets\Scripts\SonarParticleEffect.cs" />
     <Compile Include="Assets\Scripts\Andar.cs" />
+    <Compile Include="Assets\Scripts\GameoverMenu.cs" />
+    <Compile Include="Assets\Scripts\Desabamento.cs" />
     <Compile Include="Assets\Scripts\SonarEffect.cs" />
-    <Compile Include="Assets\CameraFollow.cs" />
+    <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\BorderController.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
   </ItemGroup>

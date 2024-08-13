@@ -6,9 +6,20 @@ using UnityEngine.SceneManagement;
 public class Sceneand : MonoBehaviour
 {
     private void OnCollisionEnter2D(Collision2D collision) {
-
-        if(collision.gameObject.name.Equals("Player")){
-            SceneManager.LoadScene(1);
+        if (this.name.Equals("BordaBaixo"))
+        {
+            if (collision.gameObject.name.Equals("Player"))
+            {
+                SceneManager.LoadScene("Gameover");
+            }
         }
+        if (this.name.Equals("BordaDireita"))
+        {
+            if (collision.gameObject.name.Equals("Player"))
+            {
+                SceneManager.LoadScene("Vitoria");
+            }
+        }
+        
     }
 }

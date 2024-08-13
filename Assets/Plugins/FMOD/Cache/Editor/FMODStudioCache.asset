@@ -89,10 +89,10 @@ MonoBehaviour:
   Path: FMOD/O Aventureiro/Build/Desktop/Ambience.bank
   Name: Ambience
   StudioPath: bank:/Ambience
-  lastModified: 638590777296136826
+  lastModified: 638590781762371108
   FileSizes:
   - Name: Desktop
-    Value: 7137696
+    Value: 2575552
   Exists: 1
 --- !u!114 &-3655905441624655901
 MonoBehaviour:
@@ -180,7 +180,7 @@ MonoBehaviour:
   - {fileID: 5477630782249682971}
   StringsBanks:
   - {fileID: -4452921450740580440}
-  cacheTime: 638590777296136826
+  cacheTime: 638590781762371108
   cacheVersion: 131608
 --- !u!114 &2867306900906648216
 MonoBehaviour:
@@ -356,4 +356,4 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 529546
+  Length: 192000

@@ -72,7 +72,6 @@
     <Compile Include="Assets\Scripts\Andar.cs" />
     <Compile Include="Assets\Scripts\SpiritController.cs" />
     <Compile Include="Assets\Scripts\GameoverMenu.cs" />
-    <Compile Include="Assets\Scripts\SpiritAnimation.cs" />
     <Compile Include="Assets\Scripts\Desabamento.cs" />
     <Compile Include="Assets\Scripts\SonarEffect.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />

@@ -36,9 +36,7 @@ public class SpiritManager : MonoBehaviour
                     contagem++;
                 }
             }
-
         }
-        Debug.Log(contagem);
     }
 
     public void DisableSpirits()
@@ -47,6 +45,5 @@ public class SpiritManager : MonoBehaviour
         {
             Spirits[i].enabled = false;
         }
-
     }
 }

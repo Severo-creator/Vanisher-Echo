@@ -8,6 +8,8 @@ public class SpiritManager : MonoBehaviour
 
     public int contagem;
 
+    private bool Victoria;
+
     void Start()
     {
         SpiritController[] children = GetComponentsInChildren<SpiritController>();
@@ -20,6 +22,7 @@ public class SpiritManager : MonoBehaviour
         DisableSpirits();
 
         contagem = 0;
+        Victoria = false;
     }
 
     // Update is called once per frame
@@ -37,6 +40,9 @@ public class SpiritManager : MonoBehaviour
                 }
             }
         }
+        if(contagem == Spirits.Count){
+            Victoria = true;
+        }
     }
 
     public void DisableSpirits()
@@ -45,5 +51,9 @@ public class SpiritManager : MonoBehaviour
         {
             Spirits[i].enabled = false;
         }
+    }
+
+    public bool CompletouFase(){
+        return Victoria;
     }
 }

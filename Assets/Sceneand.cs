@@ -15,7 +15,7 @@ public class Sceneand : MonoBehaviour
         }
         if (this.name.Equals("BordaDireita"))
         {
-            if (collision.gameObject.name.Equals("Player"))
+            if (collision.gameObject.name.Equals("Player") && FindObjectOfType<SpiritManager>().CompletouFase())
             {
                 SceneManager.LoadScene("Vitoria");
             }

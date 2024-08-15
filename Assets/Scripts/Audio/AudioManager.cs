@@ -26,12 +26,16 @@ public class AudioManager : MonoBehaviour
         eventEmitters = new List<StudioEventEmitter>();
         eventInstances = new List<EventInstance>();
 
+
     }
 
     private void Start(){
         stepEventInstance = CreateInstance(FMODEvents.instance.Passos);
-        //eventInstances.add(stepEventInstance);
         InitializeAmbience(FMODEvents.instance.ambience);
+        eventInstances.Add(stepEventInstance);
+        eventInstances.Add(ambienceEventInstance);
+
+
     }
 
     public void InitializeAmbience(EventReference ambienceEventReference){

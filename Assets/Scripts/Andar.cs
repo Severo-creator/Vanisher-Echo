@@ -6,7 +6,6 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    private bool isGrounded;
     public Rigidbody2D rg;
     public LayerMask groundLayer;
     public GameObject groundCheck;
@@ -51,6 +50,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
+            AudioManager.instance.stopWalk();
             falling = true;
             animator.SetBool("isJumping", true);
         }
@@ -77,7 +77,7 @@ public class PlayerMovement : MonoBehaviour
 
         if(rg.velocity.x != 0){
 
-            if(!AudioManager.instance.isWalking()){
+            if(!AudioManager.instance.isWalking() && grounded){
                 AudioManager.instance.InitializeStepSound();
             }
         }else{

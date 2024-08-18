@@ -10,7 +10,7 @@ public class MenuPrincipalManager : MonoBehaviour
     [SerializeField] private GameObject painelOPTS;
     public void Jogar()
     {
-        SceneManager.LoadScene(gameLevel);
+        GameController.instance.loadGame();
     }
 
     public void AbrirOpts()

@@ -10,14 +10,14 @@ public class Sceneand : MonoBehaviour
         {
             if (collision.gameObject.name.Equals("Player"))
             {
-                SceneManager.LoadScene("Gameover");
+                GameController.instance.GameOver();
             }
         }
         if (this.name.Equals("BordaDireita"))
         {
             if (collision.gameObject.name.Equals("Player") && FindObjectOfType<SpiritManager>().CompletouFase())
             {
-                SceneManager.LoadScene("Vitoria");
+                GameController.instance.Victory();
             }
         }
         

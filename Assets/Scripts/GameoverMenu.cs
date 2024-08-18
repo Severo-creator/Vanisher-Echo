@@ -10,7 +10,7 @@ public class GameoverMenu : MonoBehaviour
     [SerializeField] private string menuPrincipal;
     public void Botao_Reiniciar()
     {
-        SceneManager.LoadScene(gameLevel);
+        GameController.instance.RestartGame();
     }
 
     public void Botao_MenuPrincipal()

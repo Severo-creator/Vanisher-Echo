@@ -79,7 +79,7 @@ public class AreaEffectSonnar : MonoBehaviour
     {
 
 
-        yield return new WaitForSeconds(0.87f);
+        yield return new WaitForSeconds(1.50f);
         rg.velocity = new Vector2(0, rg.velocity.y);
         ev.Stop();
         eventInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);

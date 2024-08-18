@@ -32,10 +32,11 @@ public class SpiritManager : MonoBehaviour
         {
             if (contagem == i)
             {
-                DisableSpirits();
                 Spirits[i].enabled = true;
+                Spirits[i].EnableCollider();
                 if (Spirits[i].GetCatched())
                 {
+                    DisableSpirits();
                     contagem++;
                 }
             }
@@ -50,6 +51,7 @@ public class SpiritManager : MonoBehaviour
         for (int i = 0; i < Spirits.Count; i++)
         {
             Spirits[i].enabled = false;
+            Spirits[i].DisableCollider();
         }
     }
 

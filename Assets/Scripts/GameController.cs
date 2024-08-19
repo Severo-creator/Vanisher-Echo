@@ -45,6 +45,7 @@ public class GameController : MonoBehaviour
     public void loadGame(){
         SceneManager.LoadScene(level1SceneName);
         fase = 0;
+        spiritManager = GameObject.Find("SpiritManager");
     }
 
     public void GameOver()
@@ -60,18 +61,17 @@ public class GameController : MonoBehaviour
     {
         if (!gameEnded)
         {
-            if(spiritManager != null){
-                fase++;
-                if(fase == fases.Count){
-                    SceneManager.LoadScene(victorySceneName);
-                    gameEnded = true;
-                }else{
-                    SceneManager.LoadScene(fases[fase]);
-                }
-                
-            }else{
+
+            fase++;
+            if(fase == fases.Count){
                 SceneManager.LoadScene(victorySceneName);
+                gameEnded = true;
+            }else{
+                SceneManager.LoadScene(fases[fase]);
+                spiritManager = GameObject.Find("SpiritManager");
             }
+                
+
         }
     }
 

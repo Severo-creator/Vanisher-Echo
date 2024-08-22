@@ -1,11 +1,10 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
-    public static GameController instance {get; private set; }
+    public static GameController instance { get; private set; }
 
     public GameObject spiritManager;
 
@@ -14,17 +13,22 @@ public class GameController : MonoBehaviour
     [SerializeField] private string gameOverSceneName = "GameOver";
     [SerializeField] private string victorySceneName = "Vitoria";
     [SerializeField] private string menuSceneName = "Menu";
+    [SerializeField] private string introSceneName = "Introducao";
     private List<string> fases = new List<string>();
 
     private bool gameEnded = false;
 
     public int fase;
 
-    private void Awake(){
-        if (instance == null){
+    private void Awake()
+    {
+        if (instance == null)
+        {
             DontDestroyOnLoad(gameObject);
             instance = this;
-        }else{
+        }
+        else
+        {
             Debug.Log("Found more than one GameController in the scene.");
             Destroy(gameObject);
         }
@@ -38,13 +42,20 @@ public class GameController : MonoBehaviour
         victorySceneName = "Vitoria";
         menuSceneName = "Menu";
         level2SceneName = "Fase1";
-       fases.Add(level1SceneName);
-       fases.Add(level2SceneName);
+        fases.Add(level1SceneName);
+        fases.Add(level2SceneName);
     }
 
-    public void loadGame(){
-        SceneManager.LoadScene(level1SceneName);
+    public void loadGame()
+    {
+        SceneManager.LoadScene(introSceneName);
         fase = 0;
+        spiritManager = GameObject.Find("SpiritManager");
+    }
+
+    public void StartFirstLevel()
+    {
+        SceneManager.LoadScene(level1SceneName);
         spiritManager = GameObject.Find("SpiritManager");
     }
 
@@ -63,15 +74,16 @@ public class GameController : MonoBehaviour
         {
 
             fase++;
-            if(fase == fases.Count){
+            if (fase == fases.Count)
+            {
                 SceneManager.LoadScene(victorySceneName);
                 gameEnded = true;
-            }else{
+            }
+            else
+            {
                 SceneManager.LoadScene(fases[fase]);
                 spiritManager = GameObject.Find("SpiritManager");
             }
-                
-
         }
     }
 

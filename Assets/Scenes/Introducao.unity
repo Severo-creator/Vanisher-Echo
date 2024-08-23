@@ -183,8 +183,8 @@ MonoBehaviour:
   m_text: "Enquanto explora uma floresta densa, voc\xEA sofre um acidente que lhe
     tira a vis\xE3o. Felizmente, voc\xEA encontra um amuleto que lhe permite identificar
     melhor o que h\xE1 nos seus arredores pr\xF3ximos. Agora perdido, siga as vozes
-    dos esp\xEDritos para encontrar o caminho para sair desse lugar.\n\nComandos:\n\"A,
-    S, D\" para se mover.\n\"Espa\xE7o\" para saltar, no ch\xE3o ou no ar.\n\"T\"
+    dos esp\xEDritos para encontrar o caminho para sair desse lugar.\n\nComandos:\n\"A
+    e D\" para se mover.\n\"Espa\xE7o\" para saltar, no ch\xE3o ou no ar.\n\"T\"
     para ativar seu sonar."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

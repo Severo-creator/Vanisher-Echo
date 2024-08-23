@@ -1,5 +1,4 @@
 using FMODUnity;
-using System.Collections;
 using UnityEngine;
 
 public class SpiritController : MonoBehaviour
@@ -35,35 +34,29 @@ public class SpiritController : MonoBehaviour
             Catched = true;
             AudioManager.instance.PlayOneShot(FMODEvents.instance.GhostCatch, transform.position);
             collider.enabled = false;
+            animator.SetBool("isSinging", false);
         }
         else if (c2D.CompareTag("Sonar"))
         {
             //Play de evento
             ev.Play();
             animator.SetBool("isSinging", true);
-            //StartCoroutine(StopSingingAfterTime(1.0f));
-
         }
-        
-    }
 
-   /* IEnumerator StopSingingAfterTime(float time)
-    {
-        yield return new WaitForSeconds(time);
-        animator.SetBool("isSinging", false);
-        ev.Stop();
-    }*/
+    }
 
     public bool GetCatched()
     {
         return Catched;
     }
 
-    public void DisableCollider(){
+    public void DisableCollider()
+    {
         collider.enabled = false;
     }
 
-    public void EnableCollider(){
+    public void EnableCollider()
+    {
         collider.enabled = true;
     }
 

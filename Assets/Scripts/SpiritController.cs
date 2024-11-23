@@ -9,7 +9,7 @@ public class SpiritController : MonoBehaviour
     public BoxCollider2D collider;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         ev = GetComponent<StudioEventEmitter>();
         Catched = false;
@@ -39,10 +39,21 @@ public class SpiritController : MonoBehaviour
         else if (c2D.CompareTag("Sonar"))
         {
             //Play de evento
-            ev.Play();
-            animator.SetBool("isSinging", true);
+            if(!ev.IsPlaying()){
+                ev.Play();
+                animator.SetBool("isSinging", true);
+            }
+
+        }else if(c2D.CompareTag("AlcanceAudio")){
+            ev.EventInstance.setParameterByName("IsInAudioRange", 0);
         }
 
+    }
+
+    void OnTriggerExity2D(Collider2D c2D){
+        if(c2D.CompareTag("AlcanceAudio")){
+            ev.EventInstance.setParameterByName("IsInAudioRange", 1);
+        }
     }
 
     public bool GetCatched()

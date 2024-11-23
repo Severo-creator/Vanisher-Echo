@@ -24,6 +24,8 @@ public class AreaEffectSonnar : MonoBehaviour
     public LayerMask layerMask;
 
     private int direction;
+
+    public Transform areaAudicao;
     // Start is called before the first frame update
     void Start()
     {
@@ -44,11 +46,9 @@ public class AreaEffectSonnar : MonoBehaviour
 
         grounded = Physics2D.Linecast(TopCheck.transform.position, BopCheck.transform.position, layerMask);
         if (!grounded && Sonar)
-        {
-            Debug.Log("SEM CHAO!");
+        {         
             ev.Stop();
             //eventInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-
         }
 
         if (!Sonar) transform.position = new Vector3(player.transform.position.x, player.transform.position.y, transform.position.z);
@@ -56,10 +56,12 @@ public class AreaEffectSonnar : MonoBehaviour
         if (playerrg.velocity.x > 0)
         {
             direction = 1;
+            areaAudicao.rotation = Quaternion.Euler(0, 0,0);
         }
         else if (playerrg.velocity.x < 0)
         {
             direction = -1;
+            areaAudicao.rotation = Quaternion.Euler(0, 180,0);
         }
 
     }
@@ -77,8 +79,6 @@ public class AreaEffectSonnar : MonoBehaviour
 
     IEnumerator MyCoroutine()
     {
-
-
         yield return new WaitForSeconds(1.50f);
         rg.velocity = new Vector2(0, rg.velocity.y);
         ev.Stop();

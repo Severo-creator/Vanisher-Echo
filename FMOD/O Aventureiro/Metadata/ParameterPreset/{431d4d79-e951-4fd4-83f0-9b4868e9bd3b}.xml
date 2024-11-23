@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{431d4d79-e951-4fd4-83f0-9b4868e9bd3b}">
+		<property name="name">
+			<value>FrasesSoltas</value>
+		</property>
+		<relationship name="folder">
+			<destination>{fc4ddb5c-5fa9-4a6c-aeed-0850017f82b4}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{8ced54f2-dde9-4322-a775-4d043549dcc4}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{8ced54f2-dde9-4322-a775-4d043549dcc4}">
+		<property name="parameterType">
+			<value>1</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-7337362074835976269
+--- !u!114 &-6266241088326492339
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10,24 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/WindSound
+  m_Name: event:/Eventos Atopicos/Fantasmas
   m_EditorClassIdentifier: 
-  Path: event:/WindSound
+  Path: event:/Eventos Atopicos/Fantasmas
   Guid:
-    Data1: -2002920454
-    Data2: 1327150572
-    Data3: -563248480
-    Data4: 910022834
+    Data1: 1181241641
+    Data2: 1255497029
+    Data3: 2095820720
+    Data4: -1778867181
   Banks:
   - {fileID: 5226390574019148471}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
-  Parameters: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 6883070134964481801}
   MinDistance: 1
   MaxDistance: 20
-  Length: 25321
---- !u!114 &-4754884903745271769
+  Length: 11000
+--- !u!114 &-4798340377013684252
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -37,14 +38,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sonar
+  m_Name: event:/Player SDX/ImpacSound
   m_EditorClassIdentifier: 
-  Path: event:/Sonar
+  Path: event:/Player SDX/ImpacSound
   Guid:
-    Data1: 2037331937
-    Data2: 1100689258
-    Data3: -403925622
-    Data4: 1264596558
+    Data1: -459553208
+    Data2: 1177737454
+    Data3: -564208755
+    Data4: -286000412
   Banks:
   - {fileID: 5226390574019148471}
   IsStream: 0
@@ -54,7 +55,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-4703218683289713857
+--- !u!114 &-4509564218295795102
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -64,23 +65,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/PassosDeSonar
+  m_Name: event:/Player SDX/Jump
   m_EditorClassIdentifier: 
-  Path: event:/PassosDeSonar
+  Path: event:/Player SDX/Jump
   Guid:
-    Data1: 1321893739
-    Data2: 1294337404
-    Data3: 1348356283
-    Data4: -1118777636
+    Data1: -1623574669
+    Data2: 1185674831
+    Data3: 1757600402
+    Data4: -763611065
   Banks:
   - {fileID: 5226390574019148471}
   IsStream: 0
   Is3D: 0
-  IsOneShot: 0
+  IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 343
+  Length: 0
 --- !u!114 &-4452921450740580440
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96,10 +97,10 @@ MonoBehaviour:
   Path: FMOD/O Aventureiro/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638596591731395569
+  lastModified: 638669376104268675
   FileSizes:
   - Name: Desktop
-    Value: 1216
+    Value: 1566
   Exists: 1
 --- !u!114 &-3660762054207454601
 MonoBehaviour:
@@ -116,12 +117,12 @@ MonoBehaviour:
   Path: FMOD/O Aventureiro/Build/Desktop/Ambience.bank
   Name: Ambience
   StudioPath: bank:/Ambience
-  lastModified: 638591739386698673
+  lastModified: 638662656505487034
   FileSizes:
   - Name: Desktop
     Value: 2575552
   Exists: 1
---- !u!114 &-3655905441624655901
+--- !u!114 &-3638872196160763384
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,9 +132,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Passos
+  m_Name: event:/Player SDX/Passos
   m_EditorClassIdentifier: 
-  Path: event:/Passos
+  Path: event:/Player SDX/Passos
   Guid:
     Data1: 1972361257
     Data2: 1300239293
@@ -148,7 +149,55 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 656
---- !u!114 &-31392174382470211
+--- !u!114 &-3475916087407408094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Dialogo/Dialogue Parameter
+  m_EditorClassIdentifier: 
+  Name: Dialogue Parameter
+  StudioPath: 
+  Min: 0
+  Max: 30
+  Default: 0
+  ID:
+    data1: 2651046264
+    data2: 481208513
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-2871595735167339557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Dialogo/FrasesSoltas
+  m_EditorClassIdentifier: 
+  Name: FrasesSoltas
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3680142385
+    data2: 1772453403
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-1601805065437539603
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -158,14 +207,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/GhostCatch
+  m_Name: event:/Cenario/Desabamento
   m_EditorClassIdentifier: 
-  Path: event:/GhostCatch
+  Path: event:/Cenario/Desabamento
   Guid:
-    Data1: 1791502051
-    Data2: 1289373327
-    Data3: 1062567101
-    Data4: 1489922025
+    Data1: -669621703
+    Data2: 1203813656
+    Data3: 1350094262
+    Data4: 239937871
   Banks:
   - {fileID: 5226390574019148471}
   IsStream: 0
@@ -175,6 +224,54 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-1573701929925258372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Dialogo/Reset
+  m_EditorClassIdentifier: 
+  Name: Reset
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 460741895
+    data2: 2198785693
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-422276253936479972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/GhostCatch/IsInAudioRange
+  m_EditorClassIdentifier: 
+  Name: IsInAudioRange
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 3302421112
+    data2: 386398381
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193,24 +290,25 @@ MonoBehaviour:
   - {fileID: 5226390574019148471}
   - {fileID: -3660762054207454601}
   EditorEvents:
-  - {fileID: -4754884903745271769}
-  - {fileID: -7337362074835976269}
-  - {fileID: -3655905441624655901}
-  - {fileID: 2867306900906648216}
-  - {fileID: 6279856513490499412}
-  - {fileID: 3043931375449123130}
-  - {fileID: 4089316610129483612}
-  - {fileID: -31392174382470211}
-  - {fileID: 8566988965477052529}
-  - {fileID: -4703218683289713857}
+  - {fileID: 8603543868869577433}
+  - {fileID: -6266241088326492339}
+  - {fileID: -3638872196160763384}
+  - {fileID: -1601805065437539603}
+  - {fileID: -4798340377013684252}
+  - {fileID: 6195707171391702132}
+  - {fileID: -4509564218295795102}
+  - {fileID: 4831080847878731376}
+  - {fileID: 2213342545059719783}
+  - {fileID: 3782015387647818813}
+  - {fileID: 4746445352193191866}
   EditorParameters: []
   MasterBanks:
   - {fileID: 5477630782249682971}
   StringsBanks:
   - {fileID: -4452921450740580440}
-  cacheTime: 638596591731425571
+  cacheTime: 638669376113730988
   cacheVersion: 131608
---- !u!114 &2867306900906648216
+--- !u!114 &2213342545059719783
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -220,14 +318,99 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Jump
+  m_Name: event:/Eventos Atopicos/GhostCatch
   m_EditorClassIdentifier: 
-  Path: event:/Jump
+  Path: event:/Eventos Atopicos/GhostCatch
   Guid:
-    Data1: -1623574669
-    Data2: 1185674831
-    Data3: 1757600402
-    Data4: -763611065
+    Data1: 1791502051
+    Data2: 1289373327
+    Data3: 1062567101
+    Data4: 1489922025
+  Banks:
+  - {fileID: 5226390574019148471}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -422276253936479972}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &3782015387647818813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Cenario/WindSound
+  m_EditorClassIdentifier: 
+  Path: event:/Cenario/WindSound
+  Guid:
+    Data1: -2002920454
+    Data2: 1327150572
+    Data3: -563248480
+    Data4: 910022834
+  Banks:
+  - {fileID: 5226390574019148471}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 25321
+--- !u!114 &4746445352193191866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Player SDX/Player Diaologue/Dialogo
+  m_EditorClassIdentifier: 
+  Path: event:/Player SDX/Player Diaologue/Dialogo
+  Guid:
+    Data1: -1552250756
+    Data2: 1324156531
+    Data3: 437600674
+    Data4: -543413492
+  Banks:
+  - {fileID: 5226390574019148471}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -3475916087407408094}
+  - {fileID: -2871595735167339557}
+  - {fileID: -1573701929925258372}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 13879
+--- !u!114 &4831080847878731376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sonar SDX/Sonar
+  m_EditorClassIdentifier: 
+  Path: event:/Sonar SDX/Sonar
+  Guid:
+    Data1: 2037331937
+    Data2: 1100689258
+    Data3: -403925622
+    Data4: 1264596558
   Banks:
   - {fileID: 5226390574019148471}
   IsStream: 0
@@ -237,60 +420,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &3043931375449123130
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Desabamento
-  m_EditorClassIdentifier: 
-  Path: event:/Desabamento
-  Guid:
-    Data1: -669621703
-    Data2: 1203813656
-    Data3: 1350094262
-    Data4: 239937871
-  Banks:
-  - {fileID: 5226390574019148471}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &4089316610129483612
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Fantasmas
-  m_EditorClassIdentifier: 
-  Path: event:/Fantasmas
-  Guid:
-    Data1: 1181241641
-    Data2: 1255497029
-    Data3: 2095820720
-    Data4: -1778867181
-  Banks:
-  - {fileID: 5226390574019148471}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 11000
 --- !u!114 &5226390574019148471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -306,10 +435,10 @@ MonoBehaviour:
   Path: FMOD/O Aventureiro/Build/Desktop/SDX.bank
   Name: SDX
   StudioPath: bank:/SDX
-  lastModified: 638596591731425571
+  lastModified: 638669376113730988
   FileSizes:
   - Name: Desktop
-    Value: 405568
+    Value: 543456
   Exists: 1
 --- !u!114 &5477630782249682971
 MonoBehaviour:
@@ -326,12 +455,12 @@ MonoBehaviour:
   Path: FMOD/O Aventureiro/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638556857483634226
+  lastModified: 638669376104193060
   FileSizes:
   - Name: Desktop
     Value: 1036
   Exists: 1
---- !u!114 &6279856513490499412
+--- !u!114 &6195707171391702132
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -341,24 +470,48 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/ImpacSound
+  m_Name: event:/Sonar SDX/PassosDeSonar
   m_EditorClassIdentifier: 
-  Path: event:/ImpacSound
+  Path: event:/Sonar SDX/PassosDeSonar
   Guid:
-    Data1: -459553208
-    Data2: 1177737454
-    Data3: -564208755
-    Data4: -286000412
+    Data1: 1321893739
+    Data2: 1294337404
+    Data3: 1348356283
+    Data4: -1118777636
   Banks:
   - {fileID: 5226390574019148471}
   IsStream: 0
   Is3D: 0
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
---- !u!114 &8566988965477052529
+  Length: 343
+--- !u!114 &6883070134964481801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Fantasmas/IsInAudioRange
+  m_EditorClassIdentifier: 
+  Name: IsInAudioRange
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 3302421112
+    data2: 386398381
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &8603543868869577433
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -368,9 +521,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/ambience
+  m_Name: event:/Cenario/ambience
   m_EditorClassIdentifier: 
-  Path: event:/ambience
+  Path: event:/Cenario/ambience
   Guid:
     Data1: 1405858645
     Data2: 1083226389

@@ -25,8 +25,6 @@ public class AudioManager : MonoBehaviour
 
         eventEmitters = new List<StudioEventEmitter>();
         eventInstances = new List<EventInstance>();
-
-
     }
 
     private void Start(){
@@ -34,8 +32,7 @@ public class AudioManager : MonoBehaviour
         InitializeAmbience(FMODEvents.instance.ambience);
         eventInstances.Add(stepEventInstance);
         eventInstances.Add(ambienceEventInstance);
-
-
+        eventInstances.Add(DialogueEventInstance);
     }
 
     public void InitializeAmbience(EventReference ambienceEventReference){
@@ -59,6 +56,22 @@ public class AudioManager : MonoBehaviour
             //stepEventInstance.release();
         }
     }
+
+    public void SetDialogueParameter(int valor){
+        DialogueEventInstance.setParameterByName("Dialogue Parameter", valor);
+    }
+
+    public void ResetDialogueTrack(){
+        DialogueEventInstance.setParameterByName("Reset", 1);
+        DialogueEventInstance.setParameterByName("Reset", 0);
+    }
+
+    public void FrasesSoltasDialogue(){
+        DialogueEventInstance.setParameterByName("FrasesSoltas", 1);
+        DialogueEventInstance.setParameterByName("FrasesSoltas", 0);
+    }
+
+
 
     public bool isWalking(){
         PLAYBACK_STATE playbackState;

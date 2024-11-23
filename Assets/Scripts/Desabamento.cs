@@ -9,7 +9,7 @@ public class Desabamento : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Desabamento");
+        
         if(other.CompareTag("Player")){
             AudioManager.instance.PlayOneShot(FMODEvents.instance.Desabamento, transform.position);
         }

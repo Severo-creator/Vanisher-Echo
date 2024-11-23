@@ -44,7 +44,6 @@ public class PlayerMovement : MonoBehaviour
             {
                 falling = false;
                 AudioManager.instance.PlayOneShot(FMODEvents.instance.ImpactSound, transform.position);
-                Debug.Log("impact sound");
             }
             animator.SetBool("isJumping", false);
         }

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{449f83dd-394c-4410-b8b3-f2aaa48aa9d2}">
+		<property name="name">
+			<value>IsInAudioRange</value>
+		</property>
+		<relationship name="folder">
+			<destination>{fc4ddb5c-5fa9-4a6c-aeed-0850017f82b4}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{ca60ffe0-9711-4178-9170-78488291f757}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{ca60ffe0-9711-4178-9170-78488291f757}">
+		<property name="parameterType">
+			<value>1</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="initialValue">
+			<value>1</value>
+		</property>
+	</object>
+</objects>

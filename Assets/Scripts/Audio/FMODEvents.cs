@@ -12,7 +12,6 @@ public class FMODEvents : MonoBehaviour
 
     [field: Header("SFX")]
 
-
     [field: SerializeField] public EventReference Sonar {get; private set; }
 
     [field: SerializeField] public EventReference WindSound {get; private set; }
@@ -26,6 +25,10 @@ public class FMODEvents : MonoBehaviour
     [field: SerializeField] public EventReference Desabamento {get; private set; }
 
     [field: SerializeField] public EventReference GhostCatch {get; private set; }
+
+    [field: Header("Dialogue")]
+
+    [field: SerializeField] public EventReference Dialogo {get; private set; }
 
     public static FMODEvents instance {get; private set; }
 

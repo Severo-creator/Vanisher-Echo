@@ -5,7 +5,7 @@
 			<value>Fantasmas</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{7be3383c-f972-457d-b032-eaab9b9d1d58}</destination>
@@ -285,6 +285,8 @@
 		<relationship name="effects">
 			<destination>{f1835ff7-00fc-4533-958f-c2912c44d411}</destination>
 			<destination>{f7339f30-893f-49a6-847e-8b7a5a0814e9}</destination>
+			<destination>{1d36883f-5d40-4e9d-8977-50ea0dfd5a5c}</destination>
+			<destination>{1ced03ed-0b73-493b-b4ea-85e2dae2055b}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{2142cbcb-65ec-4c4d-bfaf-3b0ee843fce9}" />
@@ -382,6 +384,8 @@
 	</object>
 	<object class="MixerBusFader" id="{f1835ff7-00fc-4533-958f-c2912c44d411}" />
 	<object class="CompressorEffect" id="{f7339f30-893f-49a6-847e-8b7a5a0814e9}" />
+	<object class="ObjectSpatialiserEffect" id="{1d36883f-5d40-4e9d-8977-50ea0dfd5a5c}" />
+	<object class="SpatialiserEffect" id="{1ced03ed-0b73-493b-b4ea-85e2dae2055b}" />
 	<object class="Automator" id="{f8343d39-1349-4c66-b0b2-949b6e7b4e9c}">
 		<property name="nameOfPropertyBeingAutomated">
 			<value>threshold</value>
